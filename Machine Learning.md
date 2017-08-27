@@ -1,6 +1,6 @@
 #Machine Learning
 
-<center>!<img src="mlicon.png" style="background-size:cover"></center>
+<center><img src="mlicon.png" style="background-size:cover"></center>
 
 
 
