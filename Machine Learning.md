@@ -72,3 +72,19 @@ Previously, we mentioned that there was a **training set** to train on and a sep
 ### Cross-Validation	
 
 Dividing the dataset up into a training and testing set is problematic if the dataset is too small because an overly small test set results in statistical uncertainty. This is where the **k-fold cross-validation** procedure comes into play. The dataset is split into $k$ different subsets. We perform $k$ trials, each time selecting a different one of the $k$ different subsets as the test set and the rest of the data as training set. The test error is then estimated by the average test error across the $k$ trials.
+
+
+
+## Bias and Variance
+
+The **bias** of a model refers to erroneous assumptions in the learning algorithm. High bias can cause the algorithm to miss relevant patterns/features.
+
+The **variance** of a model refers to sensitivity to small fluctuations in the training set. High variance can cause the algorithm to model the noise in the training data.
+
+Often times, there is a **bias-variance tradeoff**. If our model was extremely simple, then it may have large bias (but small variance). If our model increases in complexity, it may have small bias (but large variance).
+
+
+
+## Supervised Learning Algorithms
+
+## Probabilistic Supervised Learning
