@@ -24,7 +24,6 @@ There are many different types of learning algorithms including:
 
 - **Machine Translation:** Computer program is given a sequence of symbols in some language, and attempts to convert the sequence of symbols in another language.
 
-  ​
 
 ### Performance Measure
 
@@ -33,8 +32,6 @@ We use quantitative metrics to evaluate the abilities of a machine learning algo
 For tasks such as classification, we can often utilize the **accuracy** (or equivalently, the misclassification rate) of the model. The misclassification rate is often referred to as the 0-1 loss. In some cases, it is inappropriate to use pure accuracy as a metric such as when the data is not uniformly distribution among all classes.
 
 The performance measure is usually evaluated on an unseen **test set** of data that is separate from the **training data** as this is a better way to evaluate how the model performs when it is deployed in the real world.
-
-
 
 ### Experience
 
@@ -67,6 +64,11 @@ $$
 J(\mathbf{w}) = \text{Loss} + \lambda \mathbf{w}^\top \mathbf{w}
 $$
 
+
 ## Hyperparameters and Validation Sets
 
-Coming soon...
+Previously, we mentioned that there was a **training set** to train on and a separate **test set** to evaluate performance metrics of our model. Suppose we are evaluating multiple different models and want to choose the best model. In theory, we do not want to use any data from our test set in our choice of evaluating the best model. For this reason, we create a separate **validation set** from the training data. We do not train our model on data from the validation set but only use it to evaluate different models. 
+
+### Cross-Validation	
+
+Dividing the dataset up into a training and testing set is problematic if the dataset is too small because an overly small test set results in statistical uncertainty. This is where the **k-fold cross-validation** procedure comes into play. The dataset is split into $k$ different subsets. We perform $k$ trials, each time selecting a different one of the $k$ different subsets as the test set and the rest of the data as training set. The test error is then estimated by the average test error across the $k$ trials.
