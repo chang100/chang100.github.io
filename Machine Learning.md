@@ -54,7 +54,19 @@ Typically, a machine learning model is trained over a training set and performan
 
 **Model capacity** refers to a model's ability to fit a wide variety of functions. By decreasing a model's capacity, a model will tend to underfit. Model capacity can be quantified using **Vapnik-Chervonenkis (VC) dimension** which is the largest value of $m$ such that the classifier can correctly label a training set of $m$ labels. 
 
+### Regularization
 
+Suppose we have some learning algorithm which will learn one function in its hypothesis space. By introducing **regularization**, we can create a predisposition for the learning algorithm such that it is more likely to learn one function rather than another. 
 
+One simple example is **weight decay** where we modify the loss function. Suppose we have weights $\mathbf{w}$, and our loss function is originally defined as
+$$
+J(\mathbf{w}) = \text{Loss}
+$$
+We can add a $L_2$ loss term to our loss function to create a preference for smaller values of weights which may help prevent overfitting.
+$$
+J(\mathbf{w}) = \text{Loss} + \lambda \mathbf{w}^\top \mathbf{w}
+$$
 
+## Hyperparameters and Validation Sets
 
+Coming soon...
