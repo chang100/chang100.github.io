@@ -87,4 +87,24 @@ Often times, there is a **bias-variance tradeoff**. If our model was extremely s
 
 ## Supervised Learning Algorithms
 
-## Probabilistic Supervised Learning
+### Probabilistic Supervised Learning
+
+Many supervised learning algorithms are trained to estimate a probability distribution $p(y | x)$ where $x$ is our inputs. For example, **logistic regression** trains weights $\theta$ and models:
+$$
+p(y=1 | x;\theta ) = \sigma(\theta^\top x), \text{ where} \\
+\sigma(x)=\frac{1}{1+e^{-x}}
+$$
+To train a logistic regression model, we generally use **gradient descent** to search for the optimal weights.
+
+### Support Vector Machines
+
+Support Vector Machines are an easy to use, simple, out of the box supervised learning algorithm.
+
+A support vector machine trains parameters $\theta$ and $b$ and predicts one class when $\theta^\top x + b > 0$ and the other class when $\theta^\top x + b < 0$. Note that unlike logistic regression, a SVM does not output class probabilities.
+
+One inspiration associated SVMs is the **kernel trick**. Before applying our SVM, we utilize a function $\phi(x)$ to transform our input then training the parameters $\theta$ and $b$ to train a linear separator on our transformed inputs. The power in the kernel trick is that it allows our model to create a nonlinear separator for our inputs.
+
+
+
+## Unsupervised Learning Algorithms
+
