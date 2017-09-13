@@ -108,3 +108,48 @@ One inspiration associated SVMs is the **kernel trick**. Before applying our SVM
 
 ## Unsupervised Learning Algorithms
 
+### Principal Component Analysis
+
+- PCA learns a representation of the data which is lower dimension than original
+
+- learns an orthogonal linear transformation of the data that projects input x into a representation z
+
+- Find $z=W^\top x$. 
+  $$
+  \begin{eqnarray}
+  X &=& U\Sigma W^\top \\
+  X^\top X &=& (U\Sigma W^\top)^\top U\Sigma W^\top \\
+  &=& W \Sigma^2 W^\top
+  \end{eqnarray}
+  $$
+
+- PCA transforms data into a representation where the elements are mutually uncorrelated
+
+### K-means Clustering
+
+- Initialize k different centroids $\{ \mu_1, \mu_2, \cdots, \mu_k \}$. Alternate these two steps until convergence
+  - Each training example is assigned to cluster $i$ that is closest
+  - Cluster means are recomputed
+
+## Stochastic Gradient Descent
+
+- Original gradient descent:
+
+  - If we have $m$ data points in our training set, 
+
+  $$
+  \begin{eqnarray}
+  J(\theta) &=& \frac{1}{m} \sum_{i=1}^m L(x^{(i)}, y^{(i)}, \theta) \\
+  \nabla J(\theta) &=& \frac{1}{m} \sum_{i=1}^m \nabla L(x^{(i)}, y^{(i)}, \theta) \\
+  \end{eqnarray}
+  $$
+
+  - Computational cost of this operation is $O(m)$.  
+
+- The insight of SGD is that the gradient is an expectation. The expectation may be approximately estimated using a small set of samples. Specifically, on each step of the algorithm, we can sample a minibatch of examples.
+
+## Challenges Motivating Deep Learning
+
+- **Curse of dimensionality:** Many machine learning problems become exceedingly difficult when the number of dimensions in the data is high
+- **Local Constancy and Smoothness Regularization:** Machine learning algorithms need to be guided by prior beliefs about what kind of function they should learn. Among the most widely used of these implicit "priors" is the smoothness prior. This states that the function we learn should not change very much within a small region
+- **Manifold Learning:** A manifold is a connected region or a set of points associated with a neighborhood around each point.
