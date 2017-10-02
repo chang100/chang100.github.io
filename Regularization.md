@@ -37,3 +37,16 @@ A central problem in machine learning is how to make an algorithm that performs 
 
 ### $L^1$ Regularization
 
+- While $L^2$ weight decay is most common, there are other ways to penalize the size of the model parameters such as $L^1$ regularization, where $\Omega(\theta) = ||w||_1 =\sum_i|w_i|$
+- Effect:
+
+$$
+\begin{eqnarray}
+\tilde J(w;X,y) &=& \alpha||w||_1 + J(w; X,y) \\
+\nabla_w \tilde J(w;X,y) &=& \alpha \text{sign}(w) + \nabla_w J(X,y;w) \\
+\end{eqnarray}
+$$
+
+- ​
+- ​
+
